@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: sgost/contentconcepts-data
 
 publish_mode: editorial_workflow
 
