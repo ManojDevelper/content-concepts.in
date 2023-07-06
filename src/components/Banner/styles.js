@@ -70,7 +70,6 @@ export const Content = styled.p`
   color: ${palette.PRIMARY_TXT_COLOR};
   width: 52vw;
   .typeAnimation {
-    margin-left: 8px;
     color: ${palette.HIGHLIGHT_TEXT};
     font-weight: bold;
     .typed-cursor {
@@ -79,9 +78,9 @@ export const Content = styled.p`
   }
   @media (max-width: 750px) {
     display: block;
-    font-size: 4vw;
+    font-size: 3.7vw;
     width: 100%;
-    line-height: 7vw;
+    line-height: 6vw;
   }
 `
 
@@ -106,8 +105,8 @@ export const ServicesList = styled.ul`
   @media (max-width: 750px) {
     flex-direction: column;
     .ant-btn {
-      width: 64vw;
-      height: 7vw;
+      width: 82vw;
+      height: 10vw;
       font-size: 3vw;
       margin-top: 3vw;
       border-radius: 1.6vw;
@@ -117,7 +116,7 @@ export const ServicesList = styled.ul`
 
 export const ImageContainer = styled.div`
   z-index: 0;
-  width: 43vw;
+  width: 47vw;
   @media (max-width: 750px) {
     width: 82vw;
   }

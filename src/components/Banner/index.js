@@ -26,8 +26,7 @@ export const HomeBannerSection = ({
         <Col className="contentSection">
           <ContentContainer>
             <Content>
-              {/* {title} */}
-              Top -notch editing services. <br/>Customers choose us for
+              {title}<br/>
               {
                 typedWords &&
                 <Typed
