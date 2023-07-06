@@ -23,15 +23,11 @@ export const HomeBannerSection = ({
   return (
     <BannerSection>
       <Row>
-        <Col xs={24} sm={24} className="mob-banner-illustration">
-          <ImageContainer>
-            <img src={BannerImage} alt="banner" />
-          </ImageContainer>
-        </Col>
-        <Col xs={24} sm={24} md={16} lg={16} xl={16} className="contentSection">
+        <Col className="contentSection">
           <ContentContainer>
             <Content>
-              {title}
+              {/* {title} */}
+              Top -notch editing services. <br/>Customers choose us for
               {
                 typedWords &&
                 <Typed
@@ -56,16 +52,14 @@ export const HomeBannerSection = ({
               )
             }
           </ServicesList>
-          <Link to="/pricing/" id="view_prize">
+          {/* <Link to="/pricing/" id="view_prize">
             <Button id="view_prize" type="primary">Get Quote / See Price<ArrowRightOutlined className="icon" /></Button>
-          </Link>
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={12} xl={10} className="resSection">
-          <ImageContainer>
-            <img src={BannerImage} alt="banner" />
-          </ImageContainer>
+          </Link> */}
         </Col>
       </Row>
+      <ImageContainer>
+            <img src="https://i.ibb.co/YcHb3sN/Frame-6837.png" alt="banner" />
+      </ImageContainer>
     </BannerSection>
   );
 };

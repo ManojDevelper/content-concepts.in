@@ -3,10 +3,18 @@ import * as palette from "../../styles/variables"
 
 export const BannerSection = styled.div`
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 35px 40px;
+  justify-content: space-between;
+  @media (max-width: 750px) {
+    flex-direction: column-reverse;
+  }
   .ant-row {
     flex-wrap: nowrap;
     .resSection {
       position: relative;
+      padding-right: 10%;
     }
     #view_prize Button {
       height: 48px;
@@ -18,9 +26,6 @@ export const BannerSection = styled.div`
     }
     @media only screen and (min-width: 320px) and (max-width: 768px) {
       flex-direction: column;
-      .resSection {
-        display: none;
-      }
       #view_prize {
         margin: 43px auto 0 auto;
       }
@@ -34,22 +39,11 @@ export const BannerSection = styled.div`
         width: 69vw;
       }
     }
-    .mob-banner-illustration {
-      display: none;
-      @media only screen and (min-width: 320px) and (max-width: 768px) {
-        display: block;
-      }
-    }
   }
   .contentSection {
-    margin: 0 auto;
-    max-width: 653px;
-    padding-left: 50px;
     padding: 9% 0 9% 2%;
-    @media only screen and (min-width: 768px) and (max-width: 992px) {
-      max-width: 400px;
-    }
     @media only screen and (min-width: 320px) and (max-width: 768px) {
+      max-width: 400px;
       max-width: unset;
       padding: 4% 6% 12% 6%;
       margin: 0;
@@ -61,31 +55,33 @@ export const BannerSection = styled.div`
 `
 
 export const ContentContainer = styled.div`
- width: 750px;
- @media (max-width: 1020px){
-  width: fit-content;
- }
+  width: 750px;
   @media only screen and (min-width: 320px) and (max-width: 768px) {
-    text-align: center;
+    width: fit-content;
+    width: 93vw;
+    align-items: left;
   }
 `
 
 export const Content = styled.p`
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 48px;
+  font-weight: 400;
+  font-size: 1.9vw;
+  line-height: 2.5vw;
   color: ${palette.PRIMARY_TXT_COLOR};
+  width: 52vw;
   .typeAnimation {
     margin-left: 8px;
     color: ${palette.HIGHLIGHT_TEXT};
-    font-weight: 600;
+    font-weight: bold;
     .typed-cursor {
       font-weight: normal;
     }
-    @media (max-width: 768px) {
-      display: block;
-      margin-left: 0px;
-    }
+  }
+  @media (max-width: 750px) {
+    display: block;
+    font-size: 4vw;
+    width: 100%;
+    line-height: 7vw;
   }
 `
 
@@ -93,49 +89,36 @@ export const ServicesList = styled.ul`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 40px;
-  @media only screen and (min-width: 576px) and (max-width: 768px) {
-    justify-content: center;
+  margin-top: 2.5vw;
+  .ant-btn {
+    border-radius: 0.7vw;
+    font-weight: normal;
+    font-size: 1vw;
+    line-height: auto;
+    color: #333333;
+    padding: 1vw 1.5vw;
+    height: 3.5vw;
+    border: 1px solid #1565c0;
+    width: fit-content;
+    margin-right: 1vw;
   }
-  @media (max-width: 576px) {
-    justify-content: center;
-    flex-wrap: wrap;
+
+  @media (max-width: 750px) {
     flex-direction: column;
-    margin: 30px 45px 0px;
-  }
-  li {
-    margin-right: 24px;
-    &:last-child {
-      margin-right: 0;
-    }
-    .ant-btn a {
-      color: ${palette.PRIMARY_TXT_COLOR} !important;
-      &:hover {
-        color: ${palette.WHITE_COLOR} !important;
-      }
-    }
-    @media only screen and (min-width: 576px) and (max-width: 768px) {
-      .ant-btn {
-        padding: 12px 20px;
-      }
-      margin-right: 15px;
-    }
-    @media (max-width: 576px) {
-      .ant-btn {
-        width: 100%;
-      }
-      width: 100%;
-      margin: 10px 0px;
+    .ant-btn {
+      width: 64vw;
+      height: 7vw;
+      font-size: 3vw;
+      margin-top: 3vw;
+      border-radius: 1.6vw;
     }
   }
 `
 
 export const ImageContainer = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
   z-index: 0;
-  @media only screen and (min-width: 320px) and (max-width: 768px) {
-    position: unset;
+  width: 43vw;
+  @media (max-width: 750px) {
+    width: 82vw;
   }
 `
