@@ -8,7 +8,7 @@ export const BannerSection = styled.div`
   padding: 35px 40px;
   justify-content: space-between;
   @media (max-width: 750px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .ant-row {
     flex-wrap: nowrap;
@@ -64,11 +64,17 @@ export const ContentContainer = styled.div`
 `
 
 export const Content = styled.p`
-  font-weight: 400;
   font-size: 1.9vw;
   line-height: 2.5vw;
   color: ${palette.PRIMARY_TXT_COLOR};
   width: 52vw;
+  .title_actual {
+    font-weight: 600;
+  }
+  .title_actual_mobile {
+    font-weight: 600;
+    display: none;
+  }
   .typeAnimation {
     color: ${palette.HIGHLIGHT_TEXT};
     font-weight: bold;
@@ -78,9 +84,24 @@ export const Content = styled.p`
   }
   @media (max-width: 750px) {
     display: block;
-    font-size: 3.7vw;
+    font-size: 6vw;
     width: 100%;
     line-height: 6vw;
+    text-align: center;
+    .title_actual {
+      display: none;
+    }
+    .title_actual_mobile {
+    display: block;
+    font-size: 6vw;
+    line-height: 9vw;
+    text-align: center;
+    width: 85vw;
+    margin-bottom: 2vw;
+  }
+  .typeAnimation {
+    margin-right: 9vw;
+  }
   }
 `
 
@@ -105,7 +126,7 @@ export const ServicesList = styled.ul`
   @media (max-width: 750px) {
     flex-direction: column;
     .ant-btn {
-      width: 82vw;
+      width: 70vw;
       height: 10vw;
       font-size: 3vw;
       margin-top: 3vw;

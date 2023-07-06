@@ -26,7 +26,8 @@ export const HomeBannerSection = ({
         <Col className="contentSection">
           <ContentContainer>
             <Content>
-              {title}<br/>
+            <span className="title_actual">International Proofreading & Editing <br/> Service for</span> {' '}
+            <span className="title_actual_mobile">International Proofreading <br/>& Editing Service for</span> {' '}
               {
                 typedWords &&
                 <Typed
